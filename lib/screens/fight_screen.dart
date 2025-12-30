@@ -122,7 +122,7 @@ class _FightScreenState extends State<FightScreen> {
 
     ImageProvider playerImage;
     if (player.imagePath.startsWith('assets')) {
-      playerImage = AssetImage(player.imagePath);
+      playerImage = AssetImage(player.imagePath, package: 'player_model');
     } else {
       playerImage = FileImage(File(player.imagePath));
     }

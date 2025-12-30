@@ -83,7 +83,7 @@ class _CharacterSelectionScreenState extends State<CharacterSelectionScreen> {
             final selectedFighter = _playerSelections[player];
             ImageProvider playerImage;
             if (player.imagePath.startsWith('assets')) {
-              playerImage = AssetImage(player.imagePath);
+              playerImage = AssetImage(player.imagePath, package: 'player_model');
             } else {
               playerImage = FileImage(File(player.imagePath));
             }

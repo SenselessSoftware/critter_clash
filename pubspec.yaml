@@ -73,16 +73,6 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/images/
-    - assets/images/avatars/
-    - assets/images/fighter1.png
-    - assets/images/fighter2.png
-    - assets/images/fighter3.png
-    - assets/images/fighter4.png
-    - assets/images/fighter1_win.png
-    - assets/images/fighter2_win.png
-    - assets/images/fighter3_win.png
-    - assets/images/fighter4_win.png
-    - assets/images/fightclub1.gif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
