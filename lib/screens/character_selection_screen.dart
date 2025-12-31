@@ -21,6 +21,7 @@ class _CharacterSelectionScreenState extends State<CharacterSelectionScreen> {
   ];
 
   final Map<Player, String?> _playerSelections = {};
+  bool _didPrecache = false;
 
   @override
   void initState() {
@@ -28,6 +29,16 @@ class _CharacterSelectionScreenState extends State<CharacterSelectionScreen> {
     final playerProvider = Provider.of<PlayerProvider>(context, listen: false);
     for (var player in playerProvider.players) {
       _playerSelections[player] = null;
+    }
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!_didPrecache) {
+      precacheImage(const AssetImage('assets/images/fightclub1.gif'), context);
+      precacheImage(const AssetImage('assets/images/fightclub1.png'), context);
+      _didPrecache = true;
     }
   }
 
